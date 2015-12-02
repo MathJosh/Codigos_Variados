@@ -1,0 +1,68 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+        float A, B;
+        char opcao;
+
+        do
+        {
+                system("cls");
+
+                printf("Escolha a operacao \n");
+                printf("\t1 - Adicao\n");
+                printf("\t2 - Subtracao\n");
+                printf("\t3 - Multiplicacao\n");
+                printf("\t4 - Divisao\n");
+                printf("\n\t5 -  Sair\n");
+
+                printf("Opcao: ");
+                scanf("%c", &opcao);
+
+        }while(opcao < 0 );
+
+        if(opcao == 5)
+        {
+                puts("\n Até logo, até mais ver, bon voyage, arrivederci, até mais, adeus, boa viagem, vá em paz, que a porta bata onde o sol não bate, não volte mais aqui, hasta la vista baby, escafeda-se, e saia logo daqui");
+
+        }
+
+        printf("\nEntre com valor 1: ");
+        scanf(" %f", &A);
+
+        printf("Entre com valor 2: ");
+        scanf(" %f", &B);
+         switch(opcao)
+        {
+                case 1:
+                        printf("\n\tadicao\n");
+                        printf("%.2f / %.2f = %.2f\n", A, B);
+                         (A + B);
+                break;
+
+                case 2:
+                        printf("\n\tsubtracao\n");
+                         printf("%.2f / %.2f = %.2f\n", A, B);
+                          (A - B);
+                break;
+
+                case 3:
+                        printf("\n\tOperacao  de multiplicacao\n");
+                         printf("%.2f / %.2f = %.2f\n", A, B);
+                          (A * B);
+                break;
+
+                case 4:
+                        if(B == 0)
+                                printf("Divide por zero\n");
+                        else
+                                printf("\n\tOperacao  de Divisao\n");
+                                printf("%.2f / %.2f = %.2f\n", A, B);
+                                (A / B);
+                break;
+
+                default:
+                        printf("Operador invalido: \n");
+        }
+}
